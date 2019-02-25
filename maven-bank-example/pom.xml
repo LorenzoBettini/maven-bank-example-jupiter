@@ -64,6 +64,24 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
+        <plugin>
+          <groupId>org.pitest</groupId>
+          <artifactId>pitest-maven</artifactId>
+          <version>1.4.10</version>
+          <configuration>
+            <targetClasses>
+              <!-- excludes testing.example.bank.app.Main -->
+              <param>testing.example.bank.Bank*</param>
+            </targetClasses>
+            <targetTests>
+              <param>testing.example.bank.*</param>
+            </targetTests>
+            <mutators>
+              <mutator>DEFAULTS</mutator>
+            </mutators>
+            <mutationThreshold>80</mutationThreshold>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
