@@ -94,8 +94,17 @@
           </configuration>
           <executions>
             <execution>
+              <goals>
+                <!-- binds by default to the phase "initialize" -->
+                <goal>prepare-agent</goal>
+                <!-- binds by default to the phase "verify" -->
+                <goal>report</goal>
+              </goals>
+            </execution>
+            <execution>
               <id>jacoco-check</id>
               <goals>
+                <!-- binds by default to the phase "verify" -->
                 <goal>check</goal>
               </goals>
               <configuration>
