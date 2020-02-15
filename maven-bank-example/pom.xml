@@ -87,6 +87,11 @@
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.8.5</version>
+          <configuration>
+            <excludes>
+              <exclude>**/Main.*</exclude>
+            </excludes>
+          </configuration>
           <executions>
             <execution>
               <id>jacoco-check</id>
