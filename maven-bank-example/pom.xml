@@ -176,6 +176,13 @@
   <profiles>
     <profile>
       <id>jacoco</id>
+      <activation>
+        <!-- Activated when the system property "skipCoverage" is not defined at 
+          all, thus, implicitly active by default -->
+        <property>
+          <name>!skipCoverage</name>
+        </property>
+      </activation>
       <build>
         <plugins>
           <plugin>
