@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class BankJupiterTest {
@@ -25,7 +26,8 @@ class BankJupiterTest {
 	}
 
 	@Test
-	void testOpenNewAccountShouldReturnAPositiveIdAndStoreTheAccount() {
+	@DisplayName("openNewBankAccount should store a new account with a positive id")
+	void testOpenNewAccount() {
 		int newAccountId = bank.openNewBankAccount(0);
 		assertAll("open new account",
 			() -> assertThat(newAccountId).isGreaterThan(0),
