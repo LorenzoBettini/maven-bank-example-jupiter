@@ -75,7 +75,14 @@
         <plugin>
           <groupId>org.pitest</groupId>
           <artifactId>pitest-maven</artifactId>
-          <version>1.4.10</version>
+          <version>1.5.2</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.pitest</groupId>
+              <artifactId>pitest-junit5-plugin</artifactId>
+              <version>0.12</version>
+            </dependency>
+          </dependencies>
           <configuration>
             <targetClasses>
               <!-- excludes testing.example.bank.app.Main -->
@@ -88,7 +95,7 @@
               <mutator>DEFAULTS</mutator>
               <mutator>NON_VOID_METHOD_CALLS</mutator>
             </mutators>
-            <mutationThreshold>90</mutationThreshold>
+            <mutationThreshold>88</mutationThreshold>
           </configuration>
         </plugin>
         <plugin>
