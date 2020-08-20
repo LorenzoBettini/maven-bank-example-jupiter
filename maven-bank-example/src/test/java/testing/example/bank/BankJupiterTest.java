@@ -30,7 +30,7 @@ class BankJupiterTest {
 	void testOpenNewAccount() {
 		int newAccountId = bank.openNewBankAccount(0);
 		assertAll("open new account",
-			() -> assertThat(newAccountId).isGreaterThan(0),
+			() -> assertThat(newAccountId).isPositive(),
 			() -> assertThat(bankAccounts).
 					hasSize(1).
 					extracting(BankAccount::getId).
