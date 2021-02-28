@@ -1,4 +1,4 @@
-# maven-bank-example
+# maven-bank-example-jupiter
 Simple Maven project with code coverage with JaCoCo and Mutation Testing with PIT using JUnit 5.
 
 An example of Chapter _Maven_ of the book
